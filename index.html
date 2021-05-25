@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        td#Grn {
+            border: 1px solid black;
+            background-color: lightgreen;
+        }
+
+        td#Ylo {
+            border: 1px solid black;
+            background-color: yellow;
+        }
+
+        td#Org {
+            border: 1px solid black;
+            background-color: orange;
+        }
+
+        td#Red {
+            border: 1px solid black;
+            background-color: orangered;
+        }
+        td#Blk {
+            border: 1px solid black;
+            background-color: black;
+            color: white;
+        }
+        td#Blnk {
+            border: 1px solid black;
+            background-color: black;
+            color: white;
+        }
+    </style>
+    <meta charset="utf-8" />
+    <title>TV Raitings Graphic</title>
+    <link href="css/default.css" rel="stylesheet" />
+</head>
+<body>
+    <h1 id="title"></h1>
+    <table style="width:100%"></table>
+
+    <textarea id="imdbid" name="imdbid" rows="1" cols="10">tt0386676</textarea>
+    <button id="button" onclick="getData()">Load Table</button>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
