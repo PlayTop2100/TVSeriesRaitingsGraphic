@@ -106,7 +106,8 @@ function getShowRaiting(i) {
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             let doc = domparser.parseFromString(this.response, "text/html");
-            result = doc.querySelector("#title-overview-widget > div.vital > div.title_block > div > div.ratings_wrapper > div.imdbRating > div.ratingValue > strong > span").innerHTML;
+            // result = doc.querySelector("#title-overview-widget > div.vital > div.title_block > div > div.ratings_wrapper > div.imdbRating > div.ratingValue > strong > span").innerHTML; // OLD
+            result = doc.querySelector("#__next > main > div > section.ipc-page-background.ipc-page-background--base.TitlePage__StyledPageBackground-wzlr49-0.dDUGgO > section > div:nth-child(4) > section > section > div.TitleBlock__Container-sc-1nlhx7j-0.hglRHk > div.TitleBlock__RatingContainer-sc-1nlhx7j-2.hBRWEt > div > div:nth-child(1) > a > div > div > div.AggregateRatingButton__ContentWrap-sc-1il8omz-0.cMcGnJ > div.AggregateRatingButton__Rating-sc-1il8omz-2.ckpPOV > span.AggregateRatingButton__RatingScore-sc-1il8omz-1.fhMjqK").innerHTML;
         }
     };
     xhttp.open("GET", "https://www.imdb.com/title/" + i + "/", false);
